@@ -1,0 +1,17 @@
+.barra{
+	display: inline-flex;
+	background: cyan;
+	width: 940px;
+	padding: 10px 20px;
+	margin: 0px 0px;
+}
+
+.barra h1 img{
+	width: 100px;
+
+}
+
+.items{
+	display: inline-block;
+	margin: 0 15px;
+}
