@@ -4,41 +4,47 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
 	<link rel="stylesheet" type="text/css" href="reset.css">
-	<link rel="stylesheet" type="text/css" href="Estilos.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,300&display=swap" rel="stylesheet">
 	<title>Encriptador de texto</title>
 </head>
 <body >
 	<header>
 		<div class="caja">
-			<h1><img src="logo.png" width="100px"></h1>
+			<h1><img src="logo.png" width="100px" class="img-logo"></h1>
 			<nav>
 				<ul>
 					<li><a href="index.html"> Inicio</a></li>
-					<li><a href="#">Linkendin-Creador</a></li>
-					<li><a href="#">GitHub</a></li>
+					<li><a href="https://linkedin.com/in/josue-alexander-carpio-martinez-95112a247">Linkendin-Creador</a></li>
+					<li><a href="https://github.com/Darkjos/Challenge-oneOracle">GitHub</a></li>
 				</ul>
 			</nav>
 		</div>
 	</header>
 
 	<main>
-		<section class="principal">
+		<section class="principal-textos">
 			<h1 class="titulo_principal">ENCRIPTADOR DE TEXTO</h1>
-			<div class="">
-				<label for="ingresarTexto">Ingresa tu texto</label>
-				<input type="text" id="ingresarTexto">
-				<button id="click" type="button" value="encriptar" onclick="encriptar();">Encriptar </button>
-				<button id="click" type="button" value="encriptar" onclick="desencriptar();"> Desencriptar </button>
-			</div>
-			<div>
-				<textarea id="f">Ningun texto encontrado...</textarea>
-				<button id="click" type="button" value="encriptar" onclick="reiniciar();"> reiniciar </button>
-				<button onclick="copiar()">Copiar</button>
-			</div>
+				<form>
+					<label for="ingresarTexto">Ingresa tu texto</label>
+					<textarea type="text" id="ingresarTexto"></textarea>
+					<button id="click" type="button" value="encriptar" onclick="encriptar();">Encriptar </button>
+					<button id="click" type="button" value="encriptar" onclick="desencriptar();"> Desencriptar </button>
+				</form>
+		</section>
+		
+		<section class="principal-textos">
+			<h1 class="titulo_principal">Texto encriptado y desencriptado</h1>
+				<form>
+					<textarea id="f">Ningun texto encontrado...</textarea>
+					<button id="click" type="button" value="encriptar" onclick="reiniciar();"> reiniciar </button>
+					<button onclick="copiar()" id="click">Copiar</button>
+				</form>
+
 		</section>
 		<script>
 			//extrallendo texto del imput
-			var input=document.querySelector("input"); 
+			var input=document.querySelector("textarea"); 
 			//funcion para encriptar el texto extraido
 			/*las llaves utilizadas son:
 				a=ai, e=enter, i=imes, o=ober, u=ufat.
@@ -103,7 +109,7 @@
 	</main>
 </body>
 	<footer>
-		<img src="logo.png" alt="Logo de la empresa">
-		<p class="copyright">&copy Copyright Barberia Alura-2022</p>
+		<img src="logo.png" alt="Logo de la empresa" class="footer">
+		<p class="copyright">&copy Copyright JosueCarpio-2022</p>
 	</footer>
 </html>
